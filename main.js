@@ -1,14 +1,14 @@
-
 /*let usuario;
 let administrador;
 let inquilino;
+
 console.log("inicio")
 function cliente(){
     usuario = prompt("ingrese usuario");
-    if(usuario == administrador){
+    if(usuario == "admin"){
     admin();
     }
-    else if(usuario == inquilino){
+    else if(usuario == "inquilino"){
         inquilinoCl();
     }
     else{
@@ -61,9 +61,158 @@ do{
 while (op != 4);
 }
 
-*/
+function cargaCl(){
+    let op;
+    let bandera=0;
+    do{
+        console.log("Carga Clientes");
+        alert("menu: 1-cargar dueño / 2-carga inquilino / 3-carga propiedad");
+        op= Number(prompt("ingrese opcion"));
+        switch(op)
+        {
+            case 1:
+                cargaDuenio ();
+                bandera = 1;
+                break;
+            case 2:
+                if (bandera == 0)
+                mensaje ();
+                else
+                {
+                cargaInquilino();           
+                }
+                break;
+    
+            case 3:
+                if (bandera == 0)
+                mensaje ();
+                else
+                cargaPropiedad();
+                break;
+        }
+    }
+    while (op != 4);
+    }*/
+class Duenio{
+    constructor(nombreDn,apellidoDn,dniDn,domicilioDn,numCll,barrio,codigoPP){
+        this.nombreDn=nombreDn
+        this.apellidoDn=apellidoDn
+        this.dniDn=dniDn
+        this.domicilioDn=domicilioDn
+        this.numCll=numCll
+        this.barrio=barrio
+        this.codigoPP=codigoPP
+    }
+}
+    const dueniosfl=[];
 
-console.log("inicio")
+    function crearDuenio(){
+        let nombreDn=prompt("ingrese nombre")
+        let apellidoDn=prompt("ingrese apellido")
+        let dniDn=Number(prompt("ingrese dni"))
+        let domicilioDn=prompt("ingrese domicilio")
+        let numCll=Number(prompt("ingrese altura"))
+        let barrio=prompt("ingrese barrio")
+        let codigoPP=Number(prompt("codigoPP"))
+        dueniosfl.push(new Duenio (nombreDn,apellidoDn,dniDn,domicilioDn,numCll,barrio,codigoPP))
+    }
+    
+    function cargaDuenio() {
+        let numCl = parseInt(prompt("ingrese el numero de dueños a cargar"));
+        for (i = 1; i <= numCl; i++) {
+        crearDuenio()
+    }
+}
+//cargaDuenio()
+//console.log([dueniosfl])
+
+
+class Inquilino{
+    constructor(nombreIq,apellidoIq,dniIq,domicilioIq,numIq,barrioIq,diaPg,mesPg,anioPg,diaIc,mesIc,anioIc,codigoPP){
+    this.nombreIq=nombreIq
+    this.apellidoIq=apellidoIq
+    this.dniIq=dniIq
+    this.domicilioIq=domicilioIq
+    this.numIq=numIq
+    this.barrioIq=barrioIq
+    this.diaPg=diaPg
+    this.mesPg=mesPg
+    this.anioPg=anioPg
+    this.diaIc=diaIc
+    this.mesIc=mesIc
+    this.anioIc=anioIc
+    this.codigoPP=codigoPP
+    }
+}
+const inquilinofl=[]
+
+function crearInquilino(){
+    let nombreIq=prompt("ingrese nombre")
+    let apellidoIq=prompt("ingrese apellido")
+    let dniIq=Number(prompt("ingrese dni"))
+    let domicilioIq=prompt("ingrese domicilio")
+    let numIq=Number(prompt("ingrese altura"))
+    let barrioIq=prompt("ingrese barrio")
+    let diaPg=Number(prompt("ingrese el dia"))
+    let mesPg=Number(prompt("ingrese el mes"))
+    let anioPg=Number(prompt("ingrese el año"))
+    let diaIc=Number(prompt("ingrese el dia"))
+    let mesIc=Number(prompt("ingrese el mes"))
+    let anioIc=Number(prompt("ingrese el año"))
+    let codigoPP=Number(prompt("codigoPP"))
+    inquilinofl.push(new Inquilino(nombreIq,apellidoIq,dniIq,domicilioIq,numIq,barrioIq,diaPg,mesPg,anioPg,diaIc,mesIc,anioIc,codigoPP))
+}   
+function cargaInquilino() {
+    let numCl = parseInt(prompt("ingrese el numero de inquilino a cargar"));
+    for (i = 1; i <= numCl; i++) {
+    crearInquilino()
+}
+}
+class Propiedad{
+    constructor(tipoPP,direccionPP,numCllPP,barrioPP,zonaPP,aptoParaVV,aptoParaCm,codigoPP){
+    this.tipoPP=tipoPP
+    this.direccionPP=direccionPP
+    this.numCllPP=numCllPP
+    this.barrioPP=barrioPP
+    this.zonaPP=zonaPP
+    this.aptoParaVV=aptoParaVV
+    this.aptoParaCm=aptoParaCm
+    this.codigoPP=codigoPP
+    }
+}
+const propiedadfl=[]
+
+function crearPropiedad(){
+    let tipoPP=prompt("ingrese nombre")
+    let direccionPP=prompt("ingrese apellido")
+    let numCllPP=Number(prompt("ingrese altura"))
+    let barrioPP=prompt("ingrese barrio")
+    let zonaPP=prompt("ingrese barrio")
+    let aptoParaVV=prompt("ingrese barrio")
+    let aptoParaCm=prompt("ingrese barrio")
+    let codigoPP=Number(prompt("codigoPP"))
+    propiedadfl.push(new Propiedad (tipoPP,direccionPP,numCllPP,barrioPP,zonaPP,aptoParaVV,aptoParaCm,codigoPP))
+}
+function cargaPropiedad() {
+    let numCl = parseInt(prompt("ingrese el numero de inquilino a cargar"));
+    for (i = 1; i <= numCl; i++) {
+    crearPropiedad()
+}
+}
+//cargaPropiedad()
+//cargaDuenio()
+//cargaInquilino() 
+console.log([inquilinofl])
+console.log([dueniosfl])
+console.log([propiedadfl])
+    function inquilinoCl(){
+    alert("en contruccion")
+    }
+    function propietarioCl(){
+    alert("en contruccion")
+    }
+
+/*console.log("inicio")
 let nombreDuenio;
 let apellidoDuenio;
 let nombreInq;
@@ -96,6 +245,7 @@ function verDnio(){
 
 }
 console.log("carga datos clientes")
+
 function cargaCl() {
     let numCl = parseInt(prompt("ingrese el numero de clientes a cargar"));
     for (i = 1; i <= numCl; i++) {
@@ -271,6 +421,4 @@ else if(tipoPr == 5){
     otros = 5;
     alert("otro tipo de propiedad");
     }
-
-console.log("fin")
-*/
+console.log("fin")*/
