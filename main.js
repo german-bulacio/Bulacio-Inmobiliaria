@@ -62,8 +62,6 @@ while (op != 4);
 }
 
 function cargaCl(){
-    let op;
-    let bandera=0;
     do{
         console.log("Carga Clientes");
         alert("menu: 1-cargar dueño / 2-carga inquilino / 3-carga propiedad");
@@ -72,28 +70,18 @@ function cargaCl(){
         {
             case 1:
                 cargaDuenio ();
-                bandera = 1;
                 break;
             case 2:
-                if (bandera == 0)
-                mensaje ();
-                else
-                {
                 cargaInquilino();           
-                }
-                break;
-    
+                break
             case 3:
-                if (bandera == 0)
-                mensaje ();
-                else
                 cargaPropiedad();
                 break;
         }
     }
     while (op != 4);
     }*/
-class Duenio{
+/*class Duenio{
     constructor(nombreDn,apellidoDn,dniDn,domicilioDn,numCll,barrio,codigoPP){
         this.nombreDn=nombreDn
         this.apellidoDn=apellidoDn
@@ -122,13 +110,55 @@ class Duenio{
         for (i = 1; i <= numCl; i++) {
         crearDuenio()
     }
+}*/
+class Prueba{
+    constructor(nombre,apellido,precio,codigoPP){
+        this.nombre=nombre
+        this.apellido=apellido
+        this.precio=precio
+        this.codigoPP=codigoPP
+    }
+    sumarIva(){
+        this.precio=this.precio*1.21;
+        }
+    sumarhonorarios(){
+        this.precio=this.precio*1.2;
+        }
+    }
+const pruebas=[]
+
+function crearPruebas(){
+    let nombre=prompt("ingrese nombre")
+    let apellido=prompt("ingrese apellido")
+    let precio=Number(prompt("ingrese precio"))
+    let codigoPP=Number(prompt("codigoPP"))
+    pruebas.push(new Prueba (nombre,apellido,precio,codigoPP))
 }
-//cargaDuenio()
-//console.log([dueniosfl])
+function cargaPruebas() {
+    let numCl = parseInt(prompt("ingrese el numero de inquilino a cargar"));
+    for (i = 1; i <= numCl; i++) {
+    crearPruebas()
+    }
+}
+cargaPruebas()
+console.log(pruebas)
+for(const Prueba of pruebas){
+    Prueba.sumarIva();
+    Prueba.sumarhonorarios();
+}
 
+//prueba.sumarhonorarios();
 
-class Inquilino{
-    constructor(nombreIq,apellidoIq,dniIq,domicilioIq,numIq,barrioIq,diaPg,mesPg,anioPg,diaIc,mesIc,anioIc,codigoPP){
+function agregarCliente(){
+    crearPruebas()
+}
+//console.log(pruebas) 
+
+/*function calculoAlquiler(){
+
+}*/
+/*class Inquilino{
+    constructor(nombreIq,apellidoIq,dniIq,domicilioIq,numIq,barrioIq,diaPg,mesPg,anioPg,diaIc,mesIc,anioIc,codigoPP,precioAlq){
     this.nombreIq=nombreIq
     this.apellidoIq=apellidoIq
     this.dniIq=dniIq
@@ -142,6 +172,7 @@ class Inquilino{
     this.mesIc=mesIc
     this.anioIc=anioIc
     this.codigoPP=codigoPP
+    this.precioAlq=precioAlq
     }
 }
 const inquilinofl=[]
@@ -159,16 +190,17 @@ function crearInquilino(){
     let diaIc=Number(prompt("ingrese el dia"))
     let mesIc=Number(prompt("ingrese el mes"))
     let anioIc=Number(prompt("ingrese el año"))
+    let precioAlq=Number(prompt("ingrese precio alquiler"))
     let codigoPP=Number(prompt("codigoPP"))
-    inquilinofl.push(new Inquilino(nombreIq,apellidoIq,dniIq,domicilioIq,numIq,barrioIq,diaPg,mesPg,anioPg,diaIc,mesIc,anioIc,codigoPP))
+    inquilinofl.push(new Inquilino(nombreIq,apellidoIq,dniIq,domicilioIq,numIq,barrioIq,diaPg,mesPg,anioPg,diaIc,mesIc,anioIc,codigoPP,precioAlq))
 }   
 function cargaInquilino() {
     let numCl = parseInt(prompt("ingrese el numero de inquilino a cargar"));
     for (i = 1; i <= numCl; i++) {
     crearInquilino()
 }
-}
-class Propiedad{
+}*/
+/*class Propiedad{
     constructor(tipoPP,direccionPP,numCllPP,barrioPP,zonaPP,aptoParaVV,aptoParaCm,codigoPP){
     this.tipoPP=tipoPP
     this.direccionPP=direccionPP
@@ -198,19 +230,27 @@ function cargaPropiedad() {
     for (i = 1; i <= numCl; i++) {
     crearPropiedad()
 }
-}
+}*/
 //cargaPropiedad()
 //cargaDuenio()
 //cargaInquilino() 
-console.log([inquilinofl])
-console.log([dueniosfl])
-console.log([propiedadfl])
+//console.log([inquilinofl])
+//console.log([dueniosfl])
+//console.log([propiedadfl])
+    
     function inquilinoCl(){
     alert("en contruccion")
     }
     function propietarioCl(){
     alert("en contruccion")
     }
+    
+ 
+    const buscado = pruebas.find((apell) => {
+        return apell.apellido === "lopez"                                                                                                                                                                                                                                                                                                                                                                                                                    .apellido === "lopez"
+    })
+    console.log(buscado) 
+    //busquedaDeCl()
 
 /*console.log("inicio")
 let nombreDuenio;

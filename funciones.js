@@ -1,39 +1,3 @@
-/*class Inquilino{
-    constructor(nombreIq,apellidoIq,dniIq,domicilioIq,numIq,barrioIq,diaPg,mesPg,anioPg,diaIc,mesIc,anioIc,codigoPP){
-    this.nombreIq=nombreIq
-    this.apellidoIq=apellidoIq
-    this.dniIq=dniIq
-    this.domicilioIq=domicilioIq
-    this.numCll=numCll
-    this.barrio=barrio
-    this.diaPg=diaPg
-    this.mesPg=mesPg
-    this.anioPg=anioPg
-    this.diaIc=diaIc
-    this.mesIc=mesIc
-    this.anioIc=anioIc
-    this.codigoPP=codigoPP
-    }
-}
-const inquilinofl=[]
-
-function crearInquilino(){
-    let nombreIq=prompt("ingrese nombre")
-    let apellidoIq=prompt("ingrese apellido")
-    let dniIq=Number(prompt("ingrese dni"))
-    let domicilioIq=prompt("ingrese domicilio")
-    let numCll=Number(prompt("ingrese altura"))
-    let barrio=prompt("ingrese barrio")
-    let diaPg=Number(prompt("ingrese el dia"))
-    let mesPg=Number(prompt("ingrese el mes"))
-    let anioPg=Number(prompt("ingrese el año"))
-    let diaIc=Number(prompt("ingrese el dia"))
-    let mesIc=Number(prompt("ingrese el mes"))
-    let anioIc=Number(prompt("ingrese el año"))
-    let codigoPP=Number(prompt("codigoPP"))
-    inquilinofl.push(new Inquilino(nombreIq,apellidoIq,dniIq,domicilioIq,numIq,barrioIq,diaPg,mesPg,anioPg,diaIc,mesIc,anioIc,codigoPP))
-}*/
-
 
 
 
