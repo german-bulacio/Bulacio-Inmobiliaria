@@ -1,3 +1,12 @@
+
+
+
+
+
+
+
+
+
 /*let usuario;
 let administrador;
 let inquilino;
@@ -111,6 +120,37 @@ function cargaCl(){
         crearDuenio()
     }
 }*/
+
+const bsePropiedades=[{tipoPP:"departamento",direccionPP:"colon",numCllPP:"122",barrioPP:"alberdi",aptoParaVV:true,aptoParaCm:false,codigoPP:100},
+                      {tipoPP:"casa",direccionPP:"rioja",numCllPP:"150",barrioPP:"palmas",aptoParaVV:true,aptoParaCm:true,codigoPP:102},
+                      {tipoPP:"local",direccionPP:"gral paz",numCllPP:"130",barrioPP:"centro",aptoParaVV:false,aptoParaCm:true,codigoPP:105},
+                      {tipoPP:"galpon",direccionPP:"jujuy",numCllPP:"220",barrioPP:"bower",aptoParaVV:false,aptoParaCm:true,codigoPP:200},
+                      {tipoPP:"departamento",direccionPP:"9 julio",numCllPP:"2122",barrioPP:"cerro nuevo",aptoParaVV:true,aptoParaCm:true,codigoPP:250},
+                      {tipoPP:"garage",direccionPP:"colon",numCllPP:"1220",barrioPP:"alto alberdi",aptoParaVV:false,aptoParaCm:true,codigoPP:400},
+]
+
+/*const productos = [{ id: 1,  nombre: "Arroz", precio: 125 },
+                  {  id: 2,  nombre: "Fideo", precio: 70 },
+                  {  id: 3,  nombre: "Pan"  , precio: 50},
+                  {  id: 4,  nombre: "Flan" , precio: 100}];*/
+
+for (const propiedad of bsePropiedades) {
+    let contenedorX = document.createElement("div");
+    
+    contenedorX.innerHTML = `<h3> ID: ${propiedad.codigoPP}</h3>
+                            <p> ${propiedad.direccionPP}</p>
+                            <p> ${propiedad.numCllPP}</p>
+                            <p> ${propiedad.barrioPP}</p>
+                            <p> ${propiedad.aptoParaVV}</p>
+                            <p> ${propiedad.aptoParaCm}</p>
+                            <p> ${propiedad.tipoPP}</p>`;
+    document.body.appendChild(contenedorX);
+}
+
+
+
+
+
 class Prueba{
     constructor(nombre,apellido,precio,codigoPP){
         this.nombre=nombre
@@ -140,23 +180,30 @@ function cargaPruebas() {
     crearPruebas()
     }
 }
-cargaPruebas()
+/*cargaPruebas()
 console.log(pruebas)
 for(const Prueba of pruebas){
     Prueba.sumarIva();
     Prueba.sumarhonorarios();
-}
+}*/
 
-//prueba.sumarhonorarios();
+/*const resultado = bsePropiedades.find((bsePropiedades)=>{
+   return bsePropiedades.direccionPP ==="jujuy"
+})
+console.log(resultado)*/
+
+const resultado2 = pruebas.find((Prueba)=>{
+    return Prueba.apellido ==="lopez"
+ })
+ console.log(resultado2)
 
 function agregarCliente(){
     crearPruebas()
 }
+
 //console.log(pruebas) 
 
-/*function calculoAlquiler(){
 
-}*/
 /*class Inquilino{
     constructor(nombreIq,apellidoIq,dniIq,domicilioIq,numIq,barrioIq,diaPg,mesPg,anioPg,diaIc,mesIc,anioIc,codigoPP,precioAlq){
     this.nombreIq=nombreIq
@@ -246,10 +293,7 @@ function cargaPropiedad() {
     }
     
  
-    const buscado = pruebas.find((apell) => {
-        return apell.apellido === "lopez"                                                                                                                                                                                                                                                                                                                                                                                                                    .apellido === "lopez"
-    })
-    console.log(buscado) 
+
     //busquedaDeCl()
 
 /*console.log("inicio")
