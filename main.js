@@ -1,3 +1,32 @@
+console.log("funciona")
+const heading=document.querySelector(".header__text h2")//
+heading.textContent="Carga de datos propiedad"
+console.log(heading);
+
+const datosPP={
+    codigoPP:Number(),
+    direccionPP:"",
+    numCllPP:Number(),
+    barrioPP:"",
+    tipoPP:"",
+}
+
+const codPP=document.querySelector("#codigoPP");
+const direccion=document.querySelector("#direccionPP");
+const numCllPrp=document.querySelector("#numCllPP");
+const barrioProp=document.querySelector("#barrioPP");
+const tipoProp=document.querySelector("#tipoPP");
+codPP.addEventListener("input", cargaCmps );
+direccion.addEventListener("input", cargaCmps);
+numCllPrp.addEventListener("input", cargaCmps);
+barrioProp.addEventListener("input", cargaCmps);
+tipoProp.addEventListener("input", cargaCmps);
+function cargaCmps(e){
+    datosPP[e.target.id]=e.target.value;
+    console.log(e.target);
+    console.log(datosPP)
+}
+
 
 
 
@@ -134,24 +163,24 @@ const bsePropiedades=[{tipoPP:"departamento",direccionPP:"colon",numCllPP:"122",
                   {  id: 3,  nombre: "Pan"  , precio: 50},
                   {  id: 4,  nombre: "Flan" , precio: 100}];*/
 
-for (const propiedad of bsePropiedades) {
-    let contenedorX = document.createElement("div");
+/*for (const propiedad of bsePropiedades) {
+    let contenedorA = document.querySelector("contenedorA");
     
-    contenedorX.innerHTML = `<h3> ID: ${propiedad.codigoPP}</h3>
+    contenedorA.innerHTML = `<h3> ID: ${propiedad.codigoPP}</h3>
                             <p> ${propiedad.direccionPP}</p>
                             <p> ${propiedad.numCllPP}</p>
                             <p> ${propiedad.barrioPP}</p>
                             <p> ${propiedad.aptoParaVV}</p>
                             <p> ${propiedad.aptoParaCm}</p>
                             <p> ${propiedad.tipoPP}</p>`;
-    document.body.appendChild(contenedorX);
-}
+    document.body.appendChild(contenedorA);
+}*/
 
 
 
 
 
-class Prueba{
+/*class Prueba{
     constructor(nombre,apellido,precio,codigoPP){
         this.nombre=nombre
         this.apellido=apellido
@@ -192,14 +221,14 @@ for(const Prueba of pruebas){
 })
 console.log(resultado)*/
 
-const resultado2 = pruebas.find((Prueba)=>{
+/*const resultado2 = pruebas.find((Prueba)=>{
     return Prueba.apellido ==="lopez"
  })
  console.log(resultado2)
 
 function agregarCliente(){
     crearPruebas()
-}
+}*/
 
 //console.log(pruebas) 
 
