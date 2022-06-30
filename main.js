@@ -1,17 +1,12 @@
 console.log("funciona")
+
 const heading=document.querySelector(".header__text h2")//
 heading.textContent="Carga de datos propiedad"
 console.log(heading);
 
-const datosPP={
-    codigoPP:Number(),
-    direccionPP:"",
-    numCllPP:Number(),
-    barrioPP:"",
-    tipoPP:"",
-}
 
-const codPP=document.querySelector("#codigoPP");
+
+/*const codPP=document.querySelector("#codigoPP");
 const direccion=document.querySelector("#direccionPP");
 const numCllPrp=document.querySelector("#numCllPP");
 const barrioProp=document.querySelector("#barrioPP");
@@ -21,12 +16,14 @@ direccion.addEventListener("input", cargaCmps);
 numCllPrp.addEventListener("input", cargaCmps);
 barrioProp.addEventListener("input", cargaCmps);
 tipoProp.addEventListener("input", cargaCmps);
-function cargaCmps(e){
-    datosPP[e.target.id]=e.target.value;
-    console.log(e.target);
-    console.log(datosPP)
-}
 
+const bsePropiedades=[];
+
+function cargaCmps(e){
+        datosPP[e.target.id]= e.target.value;
+        console.log(e.target);
+        console.log(datosPP)
+}*/
 
 
 
@@ -150,13 +147,13 @@ function cargaCl(){
     }
 }*/
 
-const bsePropiedades=[{tipoPP:"departamento",direccionPP:"colon",numCllPP:"122",barrioPP:"alberdi",aptoParaVV:true,aptoParaCm:false,codigoPP:100},
+/*const bsePropiedades=[{tipoPP:"departamento",direccionPP:"colon",numCllPP:"122",barrioPP:"alberdi",aptoParaVV:true,aptoParaCm:false,codigoPP:100},
                       {tipoPP:"casa",direccionPP:"rioja",numCllPP:"150",barrioPP:"palmas",aptoParaVV:true,aptoParaCm:true,codigoPP:102},
                       {tipoPP:"local",direccionPP:"gral paz",numCllPP:"130",barrioPP:"centro",aptoParaVV:false,aptoParaCm:true,codigoPP:105},
                       {tipoPP:"galpon",direccionPP:"jujuy",numCllPP:"220",barrioPP:"bower",aptoParaVV:false,aptoParaCm:true,codigoPP:200},
                       {tipoPP:"departamento",direccionPP:"9 julio",numCllPP:"2122",barrioPP:"cerro nuevo",aptoParaVV:true,aptoParaCm:true,codigoPP:250},
                       {tipoPP:"garage",direccionPP:"colon",numCllPP:"1220",barrioPP:"alto alberdi",aptoParaVV:false,aptoParaCm:true,codigoPP:400},
-]
+]*
 
 /*const productos = [{ id: 1,  nombre: "Arroz", precio: 125 },
                   {  id: 2,  nombre: "Fideo", precio: 70 },

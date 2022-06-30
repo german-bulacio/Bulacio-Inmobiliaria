@@ -10,23 +10,24 @@
     integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/d8ae4155fd.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../css/main.css">
+  <script defer src="../cargaPP.js"></script>
     <title>administracion</title>
 </head>
 <body>
-    <h1 class="titulo">Administrador</h1>
-    <section class="contenedorC">
+    <h1 class="titulo">Propiedades</h1>
+    <section class="container-fluid">
         <div class="header__text">
             <h2 class="subtitulo">Carga Propiedad</h2>
         </div>
         
-        <div>
-            <input id="codigoPP"   type="number" placeholder="ingrese codigo propiedad">
-            <input id="direccionPP" type="text" placeholder="ingrese direccion">
-            <input id="numCllPP"   type="number" placeholder="ingrese altura-numeracion">
-            <input id="barrioPP"   type="text"placeholder="ingrese barrio">
-            <input id="tipoPP" type="text" placeholder="ingrese tipo propiedad">            
-        </div>
-        
+        <form id="my-form">
+            <input id="codPP"   type="number" placeholder="ingrese codigo propiedad"class="form-control"/>
+            <input id="direccion" type="text" placeholder="ingrese direccion"class="form-control"/>
+            <input id="numCllProp"   type="number" placeholder="ingrese altura-numeracion"class="form-control"/>
+            <input id="barrioProp"   type="text"placeholder="ingrese barrio" class="form-control"/>
+            <input id="tipoProp" type="text" placeholder="ingrese tipo propiedad" class="form-control"/> 
+            <input id="btn_Enviar" type="submit" value="Enviar"/>          
+        </form>
 
     </section>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
@@ -37,7 +38,6 @@
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
     integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
-    crossorigin="anonymous"></script>
-    <script src="../main.js"></script>    
+    crossorigin="anonymous"></script>  
 </body>
 </html>
