@@ -109,4 +109,4 @@ function crearPropiedad(){
 //const propiedad1= crearPropiedad();
 //console.log(propiedad1)
 
-
+^*/

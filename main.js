@@ -147,13 +147,6 @@ function cargaCl(){
     }
 }*/
 
-/*const bsePropiedades=[{tipoPP:"departamento",direccionPP:"colon",numCllPP:"122",barrioPP:"alberdi",aptoParaVV:true,aptoParaCm:false,codigoPP:100},
-                      {tipoPP:"casa",direccionPP:"rioja",numCllPP:"150",barrioPP:"palmas",aptoParaVV:true,aptoParaCm:true,codigoPP:102},
-                      {tipoPP:"local",direccionPP:"gral paz",numCllPP:"130",barrioPP:"centro",aptoParaVV:false,aptoParaCm:true,codigoPP:105},
-                      {tipoPP:"galpon",direccionPP:"jujuy",numCllPP:"220",barrioPP:"bower",aptoParaVV:false,aptoParaCm:true,codigoPP:200},
-                      {tipoPP:"departamento",direccionPP:"9 julio",numCllPP:"2122",barrioPP:"cerro nuevo",aptoParaVV:true,aptoParaCm:true,codigoPP:250},
-                      {tipoPP:"garage",direccionPP:"colon",numCllPP:"1220",barrioPP:"alto alberdi",aptoParaVV:false,aptoParaCm:true,codigoPP:400},
-]*
 
 /*const productos = [{ id: 1,  nombre: "Arroz", precio: 125 },
                   {  id: 2,  nombre: "Fideo", precio: 70 },
@@ -364,20 +357,7 @@ function cargaCl() {
         nombreInq = prompt("ingrese nombre");
         apellidoInq = prompt("ingrese apellido");
 
-        let tipoPr = parseInt(prompt("ingrese el numero de tipo propiedad:1-departamento,2-casa;3-local"));
-
-        if (tipoPr == 1) {
-            departamento = 1;
-            alert("es un departamento");
-        }
-        else if (tipoPr == 2) {
-            casa = 2;
-            alert("es una casa");
-        }
-        else if (tipoPr == 3) {
-            local = 3;
-            alert("es un local");
-        }
+       
         let precioMs = parseInt(prompt("ingrese el precio Mensual alquiler"));
         let impuestos = parseInt(prompt("ingrese los impuestos"));
         let honorarios = parseInt(prompt("ingrese los honorarios"));
